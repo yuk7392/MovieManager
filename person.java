@@ -1,4 +1,4 @@
-package 이승후_중간고사_A_0427;
+
 
 class person{
 	String id,name,tel,kind;
