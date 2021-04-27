@@ -1,4 +1,3 @@
-package ÀÌ½ÂÈÄ_Áß°£°í»ç_A_0427;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -31,7 +30,7 @@ public class Program {
 				String cid = rs.getString("cid");
 				String ticketcount = rs.getString("ticketcount");
 				
-				System.out.println("¿µÈ­ ÄÚµå : "+mid+", ¿¹¸ÅÀÚ ÄÚµå : "+cid+", Æ¼ÄÏ °³¼ö : "+ticketcount);
+				System.out.println("ì˜í™” ì½”ë“œ : "+mid+", ì˜ˆë§¤ì ì½”ë“œ : "+cid+", í‹°ì¼“ ê°œìˆ˜ : "+ticketcount);
 				
 			}
 			
@@ -52,7 +51,7 @@ public class Program {
 			String sql = "insert into reservation(idmovie,cid,ticketcount) values('"+id+"','"+cid+"','"+ticket+"')";
 			stmt = conn.createStatement();
 			stmt.executeUpdate(sql);
-			System.out.println("¿¹¾à µÇ¾ú½À´Ï´Ù.");
+			System.out.println("ì˜ˆì•½ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			
 		}catch(SQLException e) {
 			
@@ -70,7 +69,7 @@ public class Program {
 			String sql = "update movie set grade='"+grade+"' where title='"+name+"'";
 			stmt = conn.createStatement();
 			stmt.executeUpdate(sql);
-			System.out.println("¼öÁ¤µÇ¾ú½À´Ï´Ù.");
+			System.out.println("ìˆ˜ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			
 			
 		}catch(SQLException e) {
@@ -95,7 +94,7 @@ public class Program {
 				String id = rs.getString("idmovie");
 				String title = rs.getString("title");
 				String grade = rs.getString("grade");
-				System.out.println("ID : "+id+", ÀÌ¸§ : "+title+", µî±Ş : "+grade);
+				System.out.println("ID : "+id+", ì´ë¦„ : "+title+", ë“±ê¸‰ : "+grade);
 				
 			}
 			
@@ -117,7 +116,7 @@ public class Program {
 			stmt  = conn.createStatement();
 			stmt.executeUpdate(sql);
 			
-			System.out.println("Ãß°¡µÇ¾ú½À´Ï´Ù.");
+			System.out.println("ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			
 		}catch(SQLException e) {
 			
@@ -168,7 +167,7 @@ public class Program {
 				String idmovie = rs.getString("idmovie");
 				String title = rs.getString("title");
 				String grade = rs.getString("grade");
-				System.out.println("¿µÈ­ ID : "+idmovie+", ¿µÈ­ÀÌ¸§ : "+title+", µî±Ş : "+grade);
+				System.out.println("ì˜í™” ID : "+idmovie+", ì˜í™”ì´ë¦„ : "+title+", ë“±ê¸‰ : "+grade);
 				
 				
 			}
@@ -215,16 +214,16 @@ public class Program {
 		
 		/*
 		 * for(int i=0;i<personManager.size();i++)
-		 * System.out.println("id : "+personManager.get(i).getId()+", ÀÌ¸§ : "
-		 * +personManager.get(i).getName()+", ÀüÈ­¹øÈ£ : "+personManager.get(i).getTel()
-		 * +" ±¸ºĞ : "+personManager.get(i).getKind());
+		 * System.out.println("id : "+personManager.get(i).getId()+", ì´ë¦„ : "
+		 * +personManager.get(i).getName()+", ì „í™”ë²ˆí˜¸ : "+personManager.get(i).getTel()
+		 * +" êµ¬ë¶„ : "+personManager.get(i).getKind());
 		 */
 		
 		do {
-		System.out.println("=====¿µÈ­°ü¸®ÇÁ·Î±×·¥=====");
+		System.out.println("=====ì˜í™”ê´€ë¦¬í”„ë¡œê·¸ë¨=====");
 		System.out.println();
-		System.out.println("1.·Î±×ÀÎ 2.Á¾·á");
-		System.out.print("ÀÔ·Â : ");
+		System.out.println("1.ë¡œê·¸ì¸ 2.ì¢…ë£Œ");
+		System.out.print("ì…ë ¥ : ");
 		ans = sc.nextInt();
 		
 	
@@ -254,10 +253,10 @@ public class Program {
 	
 	public void login() {
 		String name,tel;
-		System.out.println("======·Î±×ÀÎ=====");
-		System.out.print("ÀÌ¸§ : ");
+		System.out.println("======ë¡œê·¸ì¸=====");
+		System.out.print("ì´ë¦„ : ");
 		name=sc.next();
-		System.out.print("ÀüÈ­¹øÈ£ : ");
+		System.out.print("ì „í™”ë²ˆí˜¸ : ");
 		tel=sc.next();
 		
 		   for(int i=0;i<personManager.size();i++) {
@@ -271,7 +270,7 @@ public class Program {
 	         }
 			}
 		   
-		   System.out.println("ÇØ´çÇÏ´Â ÀÌ¸§°ú ÀüÈ­¹øÈ£¸¦ ÀæÀ» ¼ö ¾ø½À´Ï´Ù.");
+		   System.out.println("í•´ë‹¹í•˜ëŠ” ì´ë¦„ê³¼ ì „í™”ë²ˆí˜¸ë¥¼ ì¦ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		   mainMenu();
 		}
 
@@ -280,12 +279,12 @@ public class Program {
 		
 		int sel = 0;
 		do {
-		System.out.println("["+p.getName()+"] °ü¸®ÀÚ´ÔÀÌ ·Î±×ÀÎÇÏ¼Ì½À´Ï´Ù.");
+		System.out.println("["+p.getName()+"] ê´€ë¦¬ìë‹˜ì´ ë¡œê·¸ì¸í•˜ì…¨ìŠµë‹ˆë‹¤.");
 		
-		System.out.println("=====°ü¸®ÀÚ¸Å´º======");
-		System.out.println("1. ¿µÈ­°ü¸® 2. °í°´°ü¸® 3. ÀÌÀü´Ü°è·Î ÀÌµ¿");
+		System.out.println("=====ê´€ë¦¬ìë§¤ë‰´======");
+		System.out.println("1. ì˜í™”ê´€ë¦¬ 2. ê³ ê°ê´€ë¦¬ 3. ì´ì „ë‹¨ê³„ë¡œ ì´ë™");
 		System.out.println("==================");
-	 	System.out.print("°ü¸®ÀÚ ¸Å´º : ");
+	 	System.out.print("ê´€ë¦¬ì ë§¤ë‰´ : ");
 		sel = sc.nextInt();
 		
 		switch(sel) {
@@ -316,20 +315,20 @@ public class Program {
 		 do {
 		    	
 		    	System.out.println("==========");
-		    	System.out.print("1.¿µÈ­µî·Ï 2.µî±Şº¯°æ 3.ÀüÃ¼¿µÈ­¸®½ºÆ®, 4.µî±Şº° Á¶È¸, 5.ÀÌÀü´Ü°è·Î ÀÌµ¿");
+		    	System.out.print("1.ì˜í™”ë“±ë¡ 2.ë“±ê¸‰ë³€ê²½ 3.ì „ì²´ì˜í™”ë¦¬ìŠ¤íŠ¸, 4.ë“±ê¸‰ë³„ ì¡°íšŒ, 5.ì´ì „ë‹¨ê³„ë¡œ ì´ë™");
 		    	System.out.println("==========");
-		    	System.out.print("°ü¸®ÀÚ ¸Å´º : ");
+		    	System.out.print("ê´€ë¦¬ì ë§¤ë‰´ : ");
 		    	sel = sc.nextInt();
 		    	
 		    	switch(sel) {
 		    	
 		    	case 1:
 		    		
-		    		System.out.print("µî·ÏÇÒ ¿µÈ­ id : ");
+		    		System.out.print("ë“±ë¡í•  ì˜í™” id : ");
 		    		String id = sc.next();
-		    		System.out.print("µî·ÏÇÒ ¿µÈ­ ÀÌ¸§ : ");
+		    		System.out.print("ë“±ë¡í•  ì˜í™” ì´ë¦„ : ");
 		    		String name = sc.next();
-		    		System.out.print("µî·ÏÇÒ ¿µÈ­ µî±Ş : ");
+		    		System.out.print("ë“±ë¡í•  ì˜í™” ë“±ê¸‰ : ");
 		    		String grade = sc.next();
 		    		
 		    		addMovie(id,name,grade);
@@ -337,9 +336,9 @@ public class Program {
 		    		break;
 		    		
 		    	case 2: 
-		    		System.out.print("µî±ŞÀ» º¯°æÇÒ ¿µÈ­ ÀÌ¸§ : ");
+		    		System.out.print("ë“±ê¸‰ì„ ë³€ê²½í•  ì˜í™” ì´ë¦„ : ");
 		    		String mname = sc.next();
-		    		System.out.print("º¯°æÇÒ ¿µÈ­ µî±Ş : ");
+		    		System.out.print("ë³€ê²½í•  ì˜í™” ë“±ê¸‰ : ");
 		    		String mgrade = sc.next();
 		    		updateMovie(mname,mgrade);
 		    		admin_movieMenu(p);
@@ -353,7 +352,7 @@ public class Program {
 		  
 		    	case 4:
 		    		String n;
-		    		System.out.print("Á¶È¸ÇÒ µî±Ş : ");
+		    		System.out.print("ì¡°íšŒí•  ë“±ê¸‰ : ");
 		    		n=sc.next();
 		    		viewMovieByGrade(n);
 		    		admin_movieMenu(p);
@@ -376,11 +375,11 @@ public class Program {
 		int sel = 0;
 		do {
 		
-		System.out.println("=====°ü¸®ÀÚ¸Å´º=====");
-		System.out.println("1. ÀüÃ¼°í°´¸®½ºÆ® 2.ÀÌÀü´Ü°è·Î ÀÌµ¿");
+		System.out.println("=====ê´€ë¦¬ìë§¤ë‰´=====");
+		System.out.println("1. ì „ì²´ê³ ê°ë¦¬ìŠ¤íŠ¸ 2.ì´ì „ë‹¨ê³„ë¡œ ì´ë™");
 		System.out.println("=================");
 		
-		System.out.print("°ü¸®ÀÚ ¸Å´º : ");
+		System.out.print("ê´€ë¦¬ì ë§¤ë‰´ : ");
 		sel = sc.nextInt();
 		
 		switch(sel) {
@@ -388,7 +387,7 @@ public class Program {
 		case 1:
 			for(int i=0;i<personManager.size();i++) {
 				
-				System.out.println("ID : "+personManager.get(i).getId()+", ÀÌ¸§ : "+personManager.get(i).getName()+", ÀüÈ­¹øÈ£ : "+personManager.get(i).getTel()+", ±¸ºĞ : "+personManager.get(i).getKind());
+				System.out.println("ID : "+personManager.get(i).getId()+", ì´ë¦„ : "+personManager.get(i).getName()+", ì „í™”ë²ˆí˜¸ : "+personManager.get(i).getTel()+", êµ¬ë¶„ : "+personManager.get(i).getKind());
 				
 			}
 			admin_userMenu(p);
@@ -404,22 +403,22 @@ public class Program {
 	
 	public void userMenu(person p) {
 		int ins = 0;
-		System.out.println(p.getName()+"´ÔÀÌ ·Î±×ÀÎ ÇÏ¼Ì½À´Ï´Ù.");
+		System.out.println(p.getName()+"ë‹˜ì´ ë¡œê·¸ì¸ í•˜ì…¨ìŠµë‹ˆë‹¤.");
 		
 		do {
 			
 			System.out.println("=============");
-			System.out.println("1.¿¹¸Å 2.¿¹¾à¸®½ºÆ® Á¶È¸, 3.Àü´Ü°è·Î ÀÌµ¿");
+			System.out.println("1.ì˜ˆë§¤ 2.ì˜ˆì•½ë¦¬ìŠ¤íŠ¸ ì¡°íšŒ, 3.ì „ë‹¨ê³„ë¡œ ì´ë™");
 			System.out.println("=============");
-			System.out.print("ÀÔ·Â : ");
+			System.out.print("ì…ë ¥ : ");
 			ins = sc.nextInt();
 			
 			switch(ins) {
 			
 			case 1:
-				System.out.print("¿µÈ­ ID : ");
+				System.out.print("ì˜í™” ID : ");
 				String mid = sc.next();
-				System.out.print("Æ¼ÄÏ °³¼ö : ");
+				System.out.print("í‹°ì¼“ ê°œìˆ˜ : ");
 				String mtk = sc.next();
 				
 				reserveTicket(mid,p.getId(),mtk);
